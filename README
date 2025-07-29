@@ -1,0 +1,4 @@
+npm init -y
+npm install --save-dev @types/node
+docker-compose up -d #starts Hoverfly + proxy controller
+curl -X POST http://localhost:3000/v1/chat/completions -d "{\"url\":\"https://jsonplaceholder.typicode.com/posts/1\"}" #POST request to the proxy controller with data = actual endpoint
