@@ -1,0 +1,17 @@
+{
+  "name": "hoverfly-proxy",
+  "version": "1.0.0",
+  "description": "Node.js proxy that streams Hoverfly responses and exposes admin passthrough",
+  "main": "server.js",
+  "scripts": {
+    "start": "node Myserver.js"
+  },
+  "dependencies": {
+    "http-proxy": "^1.18.1",
+    "http-proxy-agent": "^7.0.2",
+    "https-proxy-agent": "^7.0.6"
+  },
+  "devDependencies": {
+    "@types/http-proxy": "^1.17.16"
+  }
+}

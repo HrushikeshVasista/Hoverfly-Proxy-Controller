@@ -1,0 +1,35 @@
+{
+  "data": {
+    "pairs": [
+      {
+        "request": {
+          "path": [
+            {
+              "matcher": "exact",
+              "value": "/api/example"
+            }
+          ],
+          "method": [
+            {
+              "matcher": "exact",
+              "value": "GET"
+            }
+          ]
+        },
+        "response": {
+          "status": 200,
+          "body": "{\"message\": \"Hello from Hoverfly!\"}",
+          "encodedBody": false,
+          "headers": {
+            "Content-Type": [
+              "application/json"
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "meta": {
+    "schemaVersion": "v5"
+  }
+}

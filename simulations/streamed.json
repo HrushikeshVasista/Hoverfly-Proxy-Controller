@@ -1,0 +1,581 @@
+{
+	"data": {
+		"pairs": [
+			{
+				"request": {
+					"path": [
+						{
+							"matcher": "exact",
+							"value": "/api/example"
+						}
+					],
+					"method": [
+						{
+							"matcher": "exact",
+							"value": "GET"
+						}
+					]
+				},
+				"response": {
+					"status": 200,
+					"body": "{\"message\": \"Hello from Hoverfly!\"}",
+					"encodedBody": false,
+					"headers": {
+						"Content-Type": [
+							"application/json"
+						]
+					},
+					"templated": false
+				}
+			},
+			{
+				"request": {
+					"path": [
+						{
+							"matcher": "exact",
+							"value": "/posts/1"
+						}
+					],
+					"method": [
+						{
+							"matcher": "exact",
+							"value": "GET"
+						}
+					],
+					"destination": [
+						{
+							"matcher": "exact",
+							"value": "jsonplaceholder.typicode.com"
+						}
+					],
+					"scheme": [
+						{
+							"matcher": "exact",
+							"value": "https"
+						}
+					],
+					"body": [
+						{
+							"matcher": "exact",
+							"value": ""
+						}
+					]
+				},
+				"response": {
+					"status": 200,
+					"body": "{\n  \"userId\": 1,\n  \"id\": 1,\n  \"title\": \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\",\n  \"body\": \"quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto\"\n}",
+					"encodedBody": false,
+					"headers": {
+						"Access-Control-Allow-Credentials": [
+							"true"
+						],
+						"Age": [
+							"17066"
+						],
+						"Alt-Svc": [
+							"h3=\":443\"; ma=86400"
+						],
+						"Cache-Control": [
+							"max-age=43200"
+						],
+						"Cf-Cache-Status": [
+							"HIT"
+						],
+						"Cf-Ray": [
+							"94baac634d15c4fb-EWR"
+						],
+						"Connection": [
+							"keep-alive"
+						],
+						"Content-Type": [
+							"application/json; charset=utf-8"
+						],
+						"Date": [
+							"Fri, 06 Jun 2025 20:31:27 GMT"
+						],
+						"Etag": [
+							"W/\"124-yiKdLzqO5gfBrJFrcdJ8Yq0LGnU\""
+						],
+						"Expires": [
+							"-1"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						],
+						"Nel": [
+							"{\"report_to\":\"heroku-nel\",\"response_headers\":[\"Via\"],\"max_age\":3600,\"success_fraction\":0.01,\"failure_fraction\":0.1}"
+						],
+						"Pragma": [
+							"no-cache"
+						],
+						"Report-To": [
+							"{\"group\":\"heroku-nel\",\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?s=%2Fk9sYsf5%2Bmqx%2BTULH0v%2FqpegX0frpYsujZLdvdFjCZI%3D\\u0026sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d\\u0026ts=1749138419\"}],\"max_age\":3600}"
+						],
+						"Reporting-Endpoints": [
+							"heroku-nel=\"https://nel.heroku.com/reports?s=%2Fk9sYsf5%2Bmqx%2BTULH0v%2FqpegX0frpYsujZLdvdFjCZI%3D&sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&ts=1749138419\""
+						],
+						"Server": [
+							"cloudflare"
+						],
+						"Server-Timing": [
+							"cfL4;desc=\"?proto=TCP&rtt=24168&min_rtt=10580&rtt_var=13132&sent=6&recv=7&lost=0&retrans=0&sent_bytes=4185&recv_bytes=1698&delivery_rate=413988&cwnd=245&unsent_bytes=0&cid=85d1e12051723908&ts=73&x=0\""
+						],
+						"Vary": [
+							"Origin, Accept-Encoding"
+						],
+						"Via": [
+							"2.0 heroku-router"
+						],
+						"X-Content-Type-Options": [
+							"nosniff"
+						],
+						"X-Powered-By": [
+							"Express"
+						],
+						"X-Ratelimit-Limit": [
+							"1000"
+						],
+						"X-Ratelimit-Remaining": [
+							"999"
+						],
+						"X-Ratelimit-Reset": [
+							"1749138429"
+						]
+					},
+					"templated": false
+				}
+			},
+			{
+				"request": {
+					"path": [
+						{
+							"matcher": "exact",
+							"value": "/api/v1/persons"
+						}
+					],
+					"method": [
+						{
+							"matcher": "exact",
+							"value": "GET"
+						}
+					],
+					"destination": [
+						{
+							"matcher": "exact",
+							"value": "fakerapi.it"
+						}
+					],
+					"scheme": [
+						{
+							"matcher": "exact",
+							"value": "https"
+						}
+					],
+					"body": [
+						{
+							"matcher": "exact",
+							"value": ""
+						}
+					],
+					"query": {
+						"_quantity": [
+							{
+								"matcher": "exact",
+								"value": "1"
+							}
+						]
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "{\"status\":\"OK\",\"code\":200,\"locale\":\"en_US\",\"seed\":null,\"total\":1,\"data\":[{\"id\":1,\"firstname\":\"Gisselle\",\"lastname\":\"Mayert\",\"email\":\"cpadberg@hickle.com\",\"phone\":\"+15316279497\",\"birthday\":\"1955-09-03\",\"gender\":\"female\",\"address\":{\"id\":1,\"street\":\"13243 Melyna Mill Apt. 964\",\"streetName\":\"Christophe Creek\",\"buildingNumber\":\"807\",\"city\":\"South Hershel\",\"zipcode\":\"16351\",\"country\":\"Indonesia\",\"country_code\":\"ID\",\"latitude\":-86.310622,\"longitude\":122.236284},\"website\":\"http:\\/\\/kerluke.info\",\"image\":\"http:\\/\\/placeimg.com\\/640\\/480\\/people\"}]}",
+					"encodedBody": false,
+					"headers": {
+						"Access-Control-Allow-Origin": [
+							"*"
+						],
+						"Cache-Control": [
+							"no-cache, private"
+						],
+						"Connection": [
+							"keep-alive"
+						],
+						"Content-Type": [
+							"application/json"
+						],
+						"Date": [
+							"Fri, 06 Jun 2025 20:31:25 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						],
+						"Server": [
+							"nginx"
+						],
+						"Vary": [
+							"Accept-Encoding"
+						],
+						"X-Powered-By": [
+							"PHP/8.3.8"
+						],
+						"X-Ratelimit-Limit": [
+							"60"
+						],
+						"X-Ratelimit-Remaining": [
+							"59"
+						],
+						"X-Ua-Compatible": [
+							"IE=Edge,chrome=1"
+						]
+					},
+					"templated": false
+				}
+			},
+			{
+				"request": {
+					"path": [
+						{
+							"matcher": "exact",
+							"value": "/books/v1/volumes"
+						}
+					],
+					"method": [
+						{
+							"matcher": "exact",
+							"value": "GET"
+						}
+					],
+					"destination": [
+						{
+							"matcher": "exact",
+							"value": "www.googleapis.com"
+						}
+					],
+					"scheme": [
+						{
+							"matcher": "exact",
+							"value": "https"
+						}
+					],
+					"body": [
+						{
+							"matcher": "exact",
+							"value": ""
+						}
+					],
+					"query": {
+						"q": [
+							{
+								"matcher": "exact",
+								"value": "harry potter"
+							}
+						]
+					}
+				},
+				"response": {
+					"status": 200,
+					"body": "{\n  \"kind\": \"books#volumes\",\n  \"totalItems\": 1000000,\n  \"items\": [\n    {\n      \"kind\": \"books#volume\",\n      \"id\": \"6JbljwEACAAJ\",\n      \"etag\": \"TXlQ4S8ApOY\",\n      \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/6JbljwEACAAJ\",\n      \"volumeInfo\": {\n        \"title\": \"Harry Potter and the Cursed Child: The Official Script Book of the Original West\",\n        \"subtitle\": \"End Production Spec\",\n        \"authors\": [\n          \"J-K Rowling\",\n          \"Jack Thorne\",\n          \"John Tiffany\"\n        ],\n        \"publisher\": \"Harry Potter (Hardcover)\",\n        \"publishedDate\": \"2016-08-22\",\n        \"description\": \"The Eighth Story. Nineteen Years Later. Based on an original new story by J.K. Rowling, Jack Thorne and John Tiffany, a new play by Jack Thorne, \\\"Harry Potter and the Cursed Child\\\" is the eighth story in the Harry Potter series and the first official Harry Potter story to be presented on stage. The play will receive its world premiere in London s West End on July 30, 2016. It was always difficult being Harry Potter and it isn t much easier now that he is an overworked employee of the Ministry of Magic, a husband and father of three school-age children. While Harry grapples with a past that refuses to stay where it belongs, his youngest son Albus must struggle with the weight of a family legacy he never wanted. As past and present fuse ominously, both father and son learn the uncomfortable truth: sometimes, darkness comes from unexpected places. \\\"\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_10\",\n            \"identifier\": \"0606384960\"\n          },\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"9780606384964\"\n          }\n        ],\n        \"readingModes\": {\n          \"text\": false,\n          \"image\": false\n        },\n        \"pageCount\": 320,\n        \"printType\": \"BOOK\",\n        \"categories\": [\n          \"Juvenile Nonfiction\"\n        ],\n        \"averageRating\": 3.5,\n        \"ratingsCount\": 3,\n        \"maturityRating\": \"NOT_MATURE\",\n        \"allowAnonLogging\": false,\n        \"contentVersion\": \"preview-1.0.0\",\n        \"panelizationSummary\": {\n          \"containsEpubBubbles\": false,\n          \"containsImageBubbles\": false\n        },\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://books.google.com/books/content?id=6JbljwEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n          \"thumbnail\": \"http://books.google.com/books/content?id=6JbljwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n        },\n        \"language\": \"en\",\n        \"previewLink\": \"http://books.google.com/books?id=6JbljwEACAAJ&dq=harry+potter&hl=&cd=1&source=gbs_api\",\n        \"infoLink\": \"http://books.google.com/books?id=6JbljwEACAAJ&dq=harry+potter&hl=&source=gbs_api\",\n        \"canonicalVolumeLink\": \"https://books.google.com/books/about/Harry_Potter_and_the_Cursed_Child_The_Of.html?hl=&id=6JbljwEACAAJ\"\n      },\n      \"saleInfo\": {\n        \"country\": \"US\",\n        \"saleability\": \"NOT_FOR_SALE\",\n        \"isEbook\": false\n      },\n      \"accessInfo\": {\n        \"country\": \"US\",\n        \"viewability\": \"NO_PAGES\",\n        \"embeddable\": false,\n        \"publicDomain\": false,\n        \"textToSpeechPermission\": \"ALLOWED\",\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": false\n        },\n        \"webReaderLink\": \"http://play.google.com/books/reader?id=6JbljwEACAAJ&hl=&source=gbs_api\",\n        \"accessViewStatus\": \"NONE\",\n        \"quoteSharingAllowed\": false\n      },\n      \"searchInfo\": {\n        \"textSnippet\": \"Based on an original new story by J.K. Rowling, Jack Thorne and John Tiffany, a new play by Jack Thorne, Harry Potter and the Cursed Child is the eighth story in the Harry Potter series and the first official Harry Potter story to be ...\"\n      }\n    },\n    {\n      \"kind\": \"books#volume\",\n      \"id\": \"wrOQLV6xB-wC\",\n      \"etag\": \"BWGo47ghENg\",\n      \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/wrOQLV6xB-wC\",\n      \"volumeInfo\": {\n        \"title\": \"Harry Potter and the Sorcerer's Stone\",\n        \"authors\": [\n          \"J.K. Rowling\"\n        ],\n        \"publisher\": \"Pottermore Publishing\",\n        \"publishedDate\": \"2015-12-08\",\n        \"description\": \"Turning the envelope over, his hand trembling, Harry saw a purple wax seal bearing a coat of arms; a lion, an eagle, a badger and a snake surrounding a large letter 'H'. Harry Potter has never even heard of Hogwarts when the letters start dropping on the doormat at number four, Privet Drive. Addressed in green ink on yellowish parchment with a purple seal, they are swiftly confiscated by his grisly aunt and uncle. Then, on Harry's eleventh birthday, a great beetle-eyed giant of a man called Rubeus Hagrid bursts in with some astonishing news: Harry Potter is a wizard, and he has a place at Hogwarts School of Witchcraft and Wizardry. An incredible adventure is about to begin! Having become classics of our time, the Harry Potter eBooks never fail to bring comfort and escapism. With their message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers.\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"9781781100486\"\n          },\n          {\n            \"type\": \"ISBN_10\",\n            \"identifier\": \"1781100489\"\n          }\n        ],\n        \"readingModes\": {\n          \"text\": true,\n          \"image\": true\n        },\n        \"pageCount\": 312,\n        \"printType\": \"BOOK\",\n        \"categories\": [\n          \"Juvenile Fiction\"\n        ],\n        \"averageRating\": 4.5,\n        \"ratingsCount\": 330,\n        \"maturityRating\": \"NOT_MATURE\",\n        \"allowAnonLogging\": true,\n        \"contentVersion\": \"3.40.38.0.preview.3\",\n        \"panelizationSummary\": {\n          \"containsEpubBubbles\": false,\n          \"containsImageBubbles\": false\n        },\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://books.google.com/books/content?id=wrOQLV6xB-wC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n          \"thumbnail\": \"http://books.google.com/books/content?id=wrOQLV6xB-wC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n        },\n        \"language\": \"en\",\n        \"previewLink\": \"http://books.google.com/books?id=wrOQLV6xB-wC&printsec=frontcover&dq=harry+potter&hl=&cd=2&source=gbs_api\",\n        \"infoLink\": \"https://play.google.com/store/books/details?id=wrOQLV6xB-wC&source=gbs_api\",\n        \"canonicalVolumeLink\": \"https://play.google.com/store/books/details?id=wrOQLV6xB-wC\"\n      },\n      \"saleInfo\": {\n        \"country\": \"US\",\n        \"saleability\": \"FOR_SALE\",\n        \"isEbook\": true,\n        \"listPrice\": {\n          \"amount\": 11.99,\n          \"currencyCode\": \"USD\"\n        },\n        \"retailPrice\": {\n          \"amount\": 11.99,\n          \"currencyCode\": \"USD\"\n        },\n        \"buyLink\": \"https://play.google.com/store/books/details?id=wrOQLV6xB-wC&rdid=book-wrOQLV6xB-wC&rdot=1&source=gbs_api\",\n        \"offers\": [\n          {\n            \"finskyOfferType\": 1,\n            \"listPrice\": {\n              \"amountInMicros\": 11990000,\n              \"currencyCode\": \"USD\"\n            },\n            \"retailPrice\": {\n              \"amountInMicros\": 11990000,\n              \"currencyCode\": \"USD\"\n            },\n            \"giftable\": true\n          }\n        ]\n      },\n      \"accessInfo\": {\n        \"country\": \"US\",\n        \"viewability\": \"PARTIAL\",\n        \"embeddable\": true,\n        \"publicDomain\": false,\n        \"textToSpeechPermission\": \"ALLOWED\",\n        \"epub\": {\n          \"isAvailable\": true,\n          \"acsTokenLink\": \"http://books.google.com/books/download/Harry_Potter_and_the_Sorcerer_s_Stone-sample-epub.acsm?id=wrOQLV6xB-wC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n        },\n        \"pdf\": {\n          \"isAvailable\": true,\n          \"acsTokenLink\": \"http://books.google.com/books/download/Harry_Potter_and_the_Sorcerer_s_Stone-sample-pdf.acsm?id=wrOQLV6xB-wC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n        },\n        \"webReaderLink\": \"http://play.google.com/books/reader?id=wrOQLV6xB-wC&hl=&source=gbs_api\",\n        \"accessViewStatus\": \"SAMPLE\",\n        \"quoteSharingAllowed\": false\n      },\n      \"searchInfo\": {\n        \"textSnippet\": \"With their message of hope, belonging and the enduring power of truth and love, the story of the Boy Who Lived continues to delight generations of new readers.\"\n      }\n    },\n    {\n      \"kind\": \"books#volume\",\n      \"id\": \"7wskKQEACAAJ\",\n      \"etag\": \"vk+cV0a+I2U\",\n      \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/7wskKQEACAAJ\",\n      \"volumeInfo\": {\n        \"title\": \"Harry Potter and the Paganization of Culture\",\n        \"authors\": [\n          \"Michael David O'Brien\"\n        ],\n        \"publishedDate\": \"2010\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_10\",\n            \"identifier\": \"8362207019\"\n          },\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"9788362207015\"\n          }\n        ],\n        \"readingModes\": {\n          \"text\": false,\n          \"image\": false\n        },\n        \"pageCount\": 0,\n        \"printType\": \"BOOK\",\n        \"categories\": [\n          \"Children's stories, English\"\n        ],\n        \"averageRating\": 5,\n        \"ratingsCount\": 1,\n        \"maturityRating\": \"NOT_MATURE\",\n        \"allowAnonLogging\": false,\n        \"contentVersion\": \"preview-1.0.0\",\n        \"panelizationSummary\": {\n          \"containsEpubBubbles\": false,\n          \"containsImageBubbles\": false\n        },\n        \"language\": \"en\",\n        \"previewLink\": \"http://books.google.com/books?id=7wskKQEACAAJ&dq=harry+potter&hl=&cd=3&source=gbs_api\",\n        \"infoLink\": \"http://books.google.com/books?id=7wskKQEACAAJ&dq=harry+potter&hl=&source=gbs_api\",\n        \"canonicalVolumeLink\": \"https://books.google.com/books/about/Harry_Potter_and_the_Paganization_of_Cul.html?hl=&id=7wskKQEACAAJ\"\n      },\n      \"saleInfo\": {\n        \"country\": \"US\",\n        \"saleability\": \"NOT_FOR_SALE\",\n        \"isEbook\": false\n      },\n      \"accessInfo\": {\n        \"country\": \"US\",\n        \"viewability\": \"NO_PAGES\",\n        \"embeddable\": false,\n        \"publicDomain\": false,\n        \"textToSpeechPermission\": \"ALLOWED\",\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": false\n        },\n        \"webReaderLink\": \"http://play.google.com/books/reader?id=7wskKQEACAAJ&hl=&source=gbs_api\",\n        \"accessViewStatus\": \"NONE\",\n        \"quoteSharingAllowed\": false\n      }\n    },\n    {\n      \"kind\": \"books#volume\",\n      \"id\": \"7yyUswEACAAJ\",\n      \"etag\": \"23dNccTxfGs\",\n      \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/7yyUswEACAAJ\",\n      \"volumeInfo\": {\n        \"title\": \"Harry Potter - The Illustrated Collection\",\n        \"authors\": [\n          \"J. K. Rowling\"\n        ],\n        \"publisher\": \"Bloomsbury Publishing\",\n        \"publishedDate\": \"2017-11-16\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_10\",\n            \"identifier\": \"1408897318\"\n          },\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"9781408897317\"\n          }\n        ],\n        \"readingModes\": {\n          \"text\": false,\n          \"image\": false\n        },\n        \"printType\": \"BOOK\",\n        \"averageRating\": 5,\n        \"ratingsCount\": 1,\n        \"maturityRating\": \"NOT_MATURE\",\n        \"allowAnonLogging\": false,\n        \"contentVersion\": \"preview-1.0.0\",\n        \"panelizationSummary\": {\n          \"containsEpubBubbles\": false,\n          \"containsImageBubbles\": false\n        },\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://books.google.com/books/content?id=7yyUswEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n          \"thumbnail\": \"http://books.google.com/books/content?id=7yyUswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n        },\n        \"language\": \"en\",\n        \"previewLink\": \"http://books.google.com/books?id=7yyUswEACAAJ&dq=harry+potter&hl=&cd=4&source=gbs_api\",\n        \"infoLink\": \"http://books.google.com/books?id=7yyUswEACAAJ&dq=harry+potter&hl=&source=gbs_api\",\n        \"canonicalVolumeLink\": \"https://books.google.com/books/about/Harry_Potter_The_Illustrated_Collection.html?hl=&id=7yyUswEACAAJ\"\n      },\n      \"saleInfo\": {\n        \"country\": \"US\",\n        \"saleability\": \"NOT_FOR_SALE\",\n        \"isEbook\": false\n      },\n      \"accessInfo\": {\n        \"country\": \"US\",\n        \"viewability\": \"NO_PAGES\",\n        \"embeddable\": false,\n        \"publicDomain\": false,\n        \"textToSpeechPermission\": \"ALLOWED\",\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": false\n        },\n        \"webReaderLink\": \"http://play.google.com/books/reader?id=7yyUswEACAAJ&hl=&source=gbs_api\",\n        \"accessViewStatus\": \"NONE\",\n        \"quoteSharingAllowed\": false\n      },\n      \"searchInfo\": {\n        \"textSnippet\": \"This illustrated collection is the beginning of an amazing magical adventure and the perfect gift for Harry Potter fans of any age.\"\n      }\n    },\n    {\n      \"kind\": \"books#volume\",\n      \"id\": \"2GZlm91NNEgC\",\n      \"etag\": \"k6GsvjyylOY\",\n      \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/2GZlm91NNEgC\",\n      \"volumeInfo\": {\n        \"title\": \"Looking for God in Harry Potter\",\n        \"authors\": [\n          \"John Granger\"\n        ],\n        \"publisher\": \"SaltRiver\",\n        \"publishedDate\": \"2006\",\n        \"description\": \"Provides a Christian interpretation of the first six books, arguing that the series supports biblical teaching as opposed to the practice of the occult, and offers insights into character names, imagery, and themes.\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"9781414306346\"\n          },\n          {\n            \"type\": \"ISBN_10\",\n            \"identifier\": \"1414306342\"\n          }\n        ],\n        \"readingModes\": {\n          \"text\": true,\n          \"image\": false\n        },\n        \"pageCount\": 234,\n        \"printType\": \"BOOK\",\n        \"categories\": [\n          \"Literary Criticism\"\n        ],\n        \"averageRating\": 4,\n        \"ratingsCount\": 4,\n        \"maturityRating\": \"NOT_MATURE\",\n        \"allowAnonLogging\": false,\n        \"contentVersion\": \"0.0.2.0.preview.2\",\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://books.google.com/books/content?id=2GZlm91NNEgC&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n          \"thumbnail\": \"http://books.google.com/books/content?id=2GZlm91NNEgC&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n        },\n        \"language\": \"en\",\n        \"previewLink\": \"http://books.google.com/books?id=2GZlm91NNEgC&dq=harry+potter&hl=&cd=5&source=gbs_api\",\n        \"infoLink\": \"http://books.google.com/books?id=2GZlm91NNEgC&dq=harry+potter&hl=&source=gbs_api\",\n        \"canonicalVolumeLink\": \"https://books.google.com/books/about/Looking_for_God_in_Harry_Potter.html?hl=&id=2GZlm91NNEgC\"\n      },\n      \"saleInfo\": {\n        \"country\": \"US\",\n        \"saleability\": \"NOT_FOR_SALE\",\n        \"isEbook\": false\n      },\n      \"accessInfo\": {\n        \"country\": \"US\",\n        \"viewability\": \"NO_PAGES\",\n        \"embeddable\": false,\n        \"publicDomain\": false,\n        \"textToSpeechPermission\": \"ALLOWED\",\n        \"epub\": {\n          \"isAvailable\": true\n        },\n        \"pdf\": {\n          \"isAvailable\": false\n        },\n        \"webReaderLink\": \"http://play.google.com/books/reader?id=2GZlm91NNEgC&hl=&source=gbs_api\",\n        \"accessViewStatus\": \"NONE\",\n        \"quoteSharingAllowed\": false\n      },\n      \"searchInfo\": {\n        \"textSnippet\": \"&quot;Looking for God in Harry Potter&quot; is a must-read for: Every Harry Potter fan who wants to know what&#39;s behind J. K. Rowling&#39;s inspiration and imagination Parents whose children are reading the Harry Potter books and who want to know more ...\"\n      }\n    },\n    {\n      \"kind\": \"books#volume\",\n      \"id\": \"EcekAwAAQBAJ\",\n      \"etag\": \"aKmfNrMMkHQ\",\n      \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/EcekAwAAQBAJ\",\n      \"volumeInfo\": {\n        \"title\": \"Fantastic Beasts and where to Find Them\",\n        \"authors\": [\n          \"J. K. Rowling\"\n        ],\n        \"publisher\": \"Bloomsbury Publishing\",\n        \"publishedDate\": \"2009-01-01\",\n        \"description\": \"An entertaining companion to the Harry Potter books, written by J.K. Rowling. Fantastic Beasts and Where to Find Them is an extensive introduction to magical beasts familiar from the Harry Potter books and others we haven't yet met. Includes information about beasts which can be found in Australia and New Zealand and what they eat.\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"9781408803011\"\n          },\n          {\n            \"type\": \"ISBN_10\",\n            \"identifier\": \"1408803011\"\n          }\n        ],\n        \"readingModes\": {\n          \"text\": false,\n          \"image\": false\n        },\n        \"pageCount\": 129,\n        \"printType\": \"BOOK\",\n        \"categories\": [\n          \"Juvenile Fiction\"\n        ],\n        \"maturityRating\": \"NOT_MATURE\",\n        \"allowAnonLogging\": false,\n        \"contentVersion\": \"0.125.1.0.preview.0\",\n        \"panelizationSummary\": {\n          \"containsEpubBubbles\": false,\n          \"containsImageBubbles\": false\n        },\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://books.google.com/books/content?id=EcekAwAAQBAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n          \"thumbnail\": \"http://books.google.com/books/content?id=EcekAwAAQBAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n        },\n        \"language\": \"en\",\n        \"previewLink\": \"http://books.google.com/books?id=EcekAwAAQBAJ&dq=harry+potter&hl=&cd=6&source=gbs_api\",\n        \"infoLink\": \"http://books.google.com/books?id=EcekAwAAQBAJ&dq=harry+potter&hl=&source=gbs_api\",\n        \"canonicalVolumeLink\": \"https://books.google.com/books/about/Fantastic_Beasts_and_where_to_Find_Them.html?hl=&id=EcekAwAAQBAJ\"\n      },\n      \"saleInfo\": {\n        \"country\": \"US\",\n        \"saleability\": \"NOT_FOR_SALE\",\n        \"isEbook\": false\n      },\n      \"accessInfo\": {\n        \"country\": \"US\",\n        \"viewability\": \"NO_PAGES\",\n        \"embeddable\": false,\n        \"publicDomain\": false,\n        \"textToSpeechPermission\": \"ALLOWED\",\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": true\n        },\n        \"webReaderLink\": \"http://play.google.com/books/reader?id=EcekAwAAQBAJ&hl=&source=gbs_api\",\n        \"accessViewStatus\": \"NONE\",\n        \"quoteSharingAllowed\": false\n      },\n      \"searchInfo\": {\n        \"textSnippet\": \"An entertaining companion to the Harry Potter books, written by J.K. Rowling. Fantastic Beasts and Where to Find Them is an extensive introduction to magical beasts familiar from the Harry Potter books and others we haven&#39;t yet met.\"\n      }\n    },\n    {\n      \"kind\": \"books#volume\",\n      \"id\": \"rV1CPgAACAAJ\",\n      \"etag\": \"ImXfVWF2BIE\",\n      \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/rV1CPgAACAAJ\",\n      \"volumeInfo\": {\n        \"title\": \"Conversations with J. K. Rowling\",\n        \"authors\": [\n          \"J. K. Rowling\",\n          \"Lindsey Fraser\"\n        ],\n        \"publisher\": \"Turtleback Books\",\n        \"publishedDate\": \"2001\",\n        \"description\": \"For use in schools and libraries only. This is the only authorized biography of the woman behind the phenomenally successful Harry Potter books.\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_10\",\n            \"identifier\": \"061335768X\"\n          },\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"9780613357685\"\n          }\n        ],\n        \"readingModes\": {\n          \"text\": false,\n          \"image\": false\n        },\n        \"pageCount\": 0,\n        \"printType\": \"BOOK\",\n        \"categories\": [\n          \"Authors, English\"\n        ],\n        \"maturityRating\": \"NOT_MATURE\",\n        \"allowAnonLogging\": false,\n        \"contentVersion\": \"preview-1.0.0\",\n        \"panelizationSummary\": {\n          \"containsEpubBubbles\": false,\n          \"containsImageBubbles\": false\n        },\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://books.google.com/books/content?id=rV1CPgAACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n          \"thumbnail\": \"http://books.google.com/books/content?id=rV1CPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n        },\n        \"language\": \"en\",\n        \"previewLink\": \"http://books.google.com/books?id=rV1CPgAACAAJ&dq=harry+potter&hl=&cd=7&source=gbs_api\",\n        \"infoLink\": \"http://books.google.com/books?id=rV1CPgAACAAJ&dq=harry+potter&hl=&source=gbs_api\",\n        \"canonicalVolumeLink\": \"https://books.google.com/books/about/Conversations_with_J_K_Rowling.html?hl=&id=rV1CPgAACAAJ\"\n      },\n      \"saleInfo\": {\n        \"country\": \"US\",\n        \"saleability\": \"NOT_FOR_SALE\",\n        \"isEbook\": false\n      },\n      \"accessInfo\": {\n        \"country\": \"US\",\n        \"viewability\": \"NO_PAGES\",\n        \"embeddable\": false,\n        \"publicDomain\": false,\n        \"textToSpeechPermission\": \"ALLOWED\",\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": false\n        },\n        \"webReaderLink\": \"http://play.google.com/books/reader?id=rV1CPgAACAAJ&hl=&source=gbs_api\",\n        \"accessViewStatus\": \"NONE\",\n        \"quoteSharingAllowed\": false\n      },\n      \"searchInfo\": {\n        \"textSnippet\": \"For use in schools and libraries only. This is the only authorized biography of the woman behind the phenomenally successful Harry Potter books.\"\n      }\n    },\n    {\n      \"kind\": \"books#volume\",\n      \"id\": \"abYKXvCwEToC\",\n      \"etag\": \"4icYyLzBU1U\",\n      \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/abYKXvCwEToC\",\n      \"volumeInfo\": {\n        \"title\": \"Harry Potter\",\n        \"subtitle\": \"The Story of a Global Business Phenomenon\",\n        \"authors\": [\n          \"S. Gunelius\"\n        ],\n        \"publisher\": \"Springer\",\n        \"publishedDate\": \"2008-06-03\",\n        \"description\": \"The Harry Potter books are the bestselling books of all time. In this fascinating study, Susan Gunelius analyzes every aspect of the brand phenomenon that is Harry Potter. Delving into price wars, box office revenue, and brand values, amongst other things, this is the story of the most incredible brand success there has ever been.\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"9780230594104\"\n          },\n          {\n            \"type\": \"ISBN_10\",\n            \"identifier\": \"0230594107\"\n          }\n        ],\n        \"readingModes\": {\n          \"text\": true,\n          \"image\": true\n        },\n        \"pageCount\": 214,\n        \"printType\": \"BOOK\",\n        \"categories\": [\n          \"Business & Economics\"\n        ],\n        \"averageRating\": 3,\n        \"ratingsCount\": 8,\n        \"maturityRating\": \"NOT_MATURE\",\n        \"allowAnonLogging\": true,\n        \"contentVersion\": \"2.5.6.0.preview.3\",\n        \"panelizationSummary\": {\n          \"containsEpubBubbles\": false,\n          \"containsImageBubbles\": false\n        },\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://books.google.com/books/content?id=abYKXvCwEToC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n          \"thumbnail\": \"http://books.google.com/books/content?id=abYKXvCwEToC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n        },\n        \"language\": \"en\",\n        \"previewLink\": \"http://books.google.com/books?id=abYKXvCwEToC&pg=PA165&dq=harry+potter&hl=&cd=8&source=gbs_api\",\n        \"infoLink\": \"https://play.google.com/store/books/details?id=abYKXvCwEToC&source=gbs_api\",\n        \"canonicalVolumeLink\": \"https://play.google.com/store/books/details?id=abYKXvCwEToC\"\n      },\n      \"saleInfo\": {\n        \"country\": \"US\",\n        \"saleability\": \"FOR_SALE_AND_RENTAL\",\n        \"isEbook\": true,\n        \"listPrice\": {\n          \"amount\": 54.99,\n          \"currencyCode\": \"USD\"\n        },\n        \"retailPrice\": {\n          \"amount\": 43.44,\n          \"currencyCode\": \"USD\"\n        },\n        \"buyLink\": \"https://play.google.com/store/books/details?id=abYKXvCwEToC&rdid=book-abYKXvCwEToC&rdot=1&source=gbs_api\",\n        \"offers\": [\n          {\n            \"finskyOfferType\": 1,\n            \"listPrice\": {\n              \"amountInMicros\": 54990000,\n              \"currencyCode\": \"USD\"\n            },\n            \"retailPrice\": {\n              \"amountInMicros\": 43440000,\n              \"currencyCode\": \"USD\"\n            },\n            \"giftable\": true\n          },\n          {\n            \"finskyOfferType\": 3,\n            \"listPrice\": {\n              \"amountInMicros\": 19250000,\n              \"currencyCode\": \"USD\"\n            },\n            \"retailPrice\": {\n              \"amountInMicros\": 16750000,\n              \"currencyCode\": \"USD\"\n            },\n            \"rentalDuration\": {\n              \"unit\": \"DAY\",\n              \"count\": 90\n            }\n          }\n        ]\n      },\n      \"accessInfo\": {\n        \"country\": \"US\",\n        \"viewability\": \"PARTIAL\",\n        \"embeddable\": true,\n        \"publicDomain\": false,\n        \"textToSpeechPermission\": \"ALLOWED\",\n        \"epub\": {\n          \"isAvailable\": true,\n          \"acsTokenLink\": \"http://books.google.com/books/download/Harry_Potter-sample-epub.acsm?id=abYKXvCwEToC&format=epub&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n        },\n        \"pdf\": {\n          \"isAvailable\": true,\n          \"acsTokenLink\": \"http://books.google.com/books/download/Harry_Potter-sample-pdf.acsm?id=abYKXvCwEToC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n        },\n        \"webReaderLink\": \"http://play.google.com/books/reader?id=abYKXvCwEToC&hl=&source=gbs_api\",\n        \"accessViewStatus\": \"SAMPLE\",\n        \"quoteSharingAllowed\": false\n      },\n      \"searchInfo\": {\n        \"textSnippet\": \"... Potter , Book 8 , RIP . ” ( 9 Nov. 2007 ) , http://www.hpana.com/news.20263.html . &quot; English \\u003cb\\u003eHarry Potter\\u003c/b\\u003e Book Flies to Top of German Bestseller List . &quot; ( 25 Jul . 2007 ) ... \\u003cb\\u003eHarry Potter\\u003c/b\\u003e Finale Sales Hit 11m . &quot; ( 165 BIBLIOGRAPHY.\"\n      }\n    },\n    {\n      \"kind\": \"books#volume\",\n      \"id\": \"JHEkAQAAMAAJ\",\n      \"etag\": \"RBuYvziwM9Q\",\n      \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/JHEkAQAAMAAJ\",\n      \"volumeInfo\": {\n        \"title\": \"Harry Potter and the Deathly Hallows\",\n        \"authors\": [\n          \"J. K. Rowling\"\n        ],\n        \"publishedDate\": \"2007\",\n        \"description\": \"\\\"The final adventure in J.K. Rowling's phenomenal, best-selling Harry Potter book series\\\"--Provided by publisher.\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"OTHER\",\n            \"identifier\": \"UOM:39076002651854\"\n          }\n        ],\n        \"readingModes\": {\n          \"text\": false,\n          \"image\": false\n        },\n        \"pageCount\": 870,\n        \"printType\": \"BOOK\",\n        \"categories\": [\n          \"Juvenile Fiction\"\n        ],\n        \"averageRating\": 5,\n        \"ratingsCount\": 3,\n        \"maturityRating\": \"NOT_MATURE\",\n        \"allowAnonLogging\": false,\n        \"contentVersion\": \"0.3.3.0.preview.0\",\n        \"panelizationSummary\": {\n          \"containsEpubBubbles\": false,\n          \"containsImageBubbles\": false\n        },\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://books.google.com/books/content?id=JHEkAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api\",\n          \"thumbnail\": \"http://books.google.com/books/content?id=JHEkAQAAMAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api\"\n        },\n        \"language\": \"en\",\n        \"previewLink\": \"http://books.google.com/books?id=JHEkAQAAMAAJ&q=harry+potter&dq=harry+potter&hl=&cd=9&source=gbs_api\",\n        \"infoLink\": \"http://books.google.com/books?id=JHEkAQAAMAAJ&dq=harry+potter&hl=&source=gbs_api\",\n        \"canonicalVolumeLink\": \"https://books.google.com/books/about/Harry_Potter_and_the_Deathly_Hallows.html?hl=&id=JHEkAQAAMAAJ\"\n      },\n      \"saleInfo\": {\n        \"country\": \"US\",\n        \"saleability\": \"NOT_FOR_SALE\",\n        \"isEbook\": false\n      },\n      \"accessInfo\": {\n        \"country\": \"US\",\n        \"viewability\": \"NO_PAGES\",\n        \"embeddable\": false,\n        \"publicDomain\": false,\n        \"textToSpeechPermission\": \"ALLOWED\",\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": false\n        },\n        \"webReaderLink\": \"http://play.google.com/books/reader?id=JHEkAQAAMAAJ&hl=&source=gbs_api\",\n        \"accessViewStatus\": \"NONE\",\n        \"quoteSharingAllowed\": false\n      },\n      \"searchInfo\": {\n        \"textSnippet\": \"&quot;The final adventure in J.K. Rowling&#39;s phenomenal, best-selling Harry Potter book series&quot;--Provided by publisher.\"\n      }\n    },\n    {\n      \"kind\": \"books#volume\",\n      \"id\": \"jGmWkbDwbsEC\",\n      \"etag\": \"rrom/KXkAYw\",\n      \"selfLink\": \"https://www.googleapis.com/books/v1/volumes/jGmWkbDwbsEC\",\n      \"volumeInfo\": {\n        \"title\": \"The Complete Idiot's Guide to the World of Harry Potter\",\n        \"authors\": [\n          \"Tere Stouffer\"\n        ],\n        \"publisher\": \"Penguin\",\n        \"publishedDate\": \"2007\",\n        \"description\": \"You're no idiot. You know the wildly popular Harry Potter series has captivated readers of all ages from the release of Harry Potter and the Sorcerer's Stoneon. But did you recognize all the subtle references Rowling uses in her characters' names or in the magical creatures we encounter and places we explore in Harry's wonderful world of wizardry? The truth is, the world of Harry Potter is incredibly textured and complex and not only has factual roots in history, mythology, science, and folklore, but also draws on all genres of literature, from C. S. Lewis to the Bible. You'll learn this and much more in the fun facts and tantalizing trivia provided in this fabulous new addition to the Complete Idiot's Guide series! This is not a retelling of Rowling's stories, nor is it intended to be a cheat sheet to the novels, a la the Cliffs Notes series. Instead, it is an entertaining and easily referenced presentation of insider information to the world Rowling has created in her spellbinding series of novels.\",\n        \"industryIdentifiers\": [\n          {\n            \"type\": \"ISBN_10\",\n            \"identifier\": \"1592575994\"\n          },\n          {\n            \"type\": \"ISBN_13\",\n            \"identifier\": \"9781592575992\"\n          }\n        ],\n        \"readingModes\": {\n          \"text\": false,\n          \"image\": true\n        },\n        \"pageCount\": 276,\n        \"printType\": \"BOOK\",\n        \"categories\": [\n          \"Juvenile Nonfiction\"\n        ],\n        \"averageRating\": 4,\n        \"ratingsCount\": 9,\n        \"maturityRating\": \"NOT_MATURE\",\n        \"allowAnonLogging\": false,\n        \"contentVersion\": \"4.3.5.0.preview.1\",\n        \"panelizationSummary\": {\n          \"containsEpubBubbles\": false,\n          \"containsImageBubbles\": false\n        },\n        \"imageLinks\": {\n          \"smallThumbnail\": \"http://books.google.com/books/content?id=jGmWkbDwbsEC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api\",\n          \"thumbnail\": \"http://books.google.com/books/content?id=jGmWkbDwbsEC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api\"\n        },\n        \"language\": \"en\",\n        \"previewLink\": \"http://books.google.com/books?id=jGmWkbDwbsEC&pg=PA237&dq=harry+potter&hl=&cd=10&source=gbs_api\",\n        \"infoLink\": \"http://books.google.com/books?id=jGmWkbDwbsEC&dq=harry+potter&hl=&source=gbs_api\",\n        \"canonicalVolumeLink\": \"https://books.google.com/books/about/The_Complete_Idiot_s_Guide_to_the_World.html?hl=&id=jGmWkbDwbsEC\"\n      },\n      \"saleInfo\": {\n        \"country\": \"US\",\n        \"saleability\": \"NOT_FOR_SALE\",\n        \"isEbook\": false\n      },\n      \"accessInfo\": {\n        \"country\": \"US\",\n        \"viewability\": \"PARTIAL\",\n        \"embeddable\": true,\n        \"publicDomain\": false,\n        \"textToSpeechPermission\": \"ALLOWED\",\n        \"epub\": {\n          \"isAvailable\": false\n        },\n        \"pdf\": {\n          \"isAvailable\": true,\n          \"acsTokenLink\": \"http://books.google.com/books/download/The_Complete_Idiot_s_Guide_to_the_World-sample-pdf.acsm?id=jGmWkbDwbsEC&format=pdf&output=acs4_fulfillment_token&dl_type=sample&source=gbs_api\"\n        },\n        \"webReaderLink\": \"http://play.google.com/books/reader?id=jGmWkbDwbsEC&hl=&source=gbs_api\",\n        \"accessViewStatus\": \"SAMPLE\",\n        \"quoteSharingAllowed\": false\n      },\n      \"searchInfo\": {\n        \"textSnippet\": \"... \\u003cb\\u003eHarry Potter\\u003c/b\\u003e - themed LEGO sets . Products range from \\u003cb\\u003eHarry Potter\\u003c/b\\u003e keychains to the Hogwarts Express train set to entire kits and games that reenact scenes from the novels . Like all LEGO products , prices tend to be on the steep side&nbsp;...\"\n      }\n    }\n  ]\n}\n",
+					"encodedBody": false,
+					"headers": {
+						"Alt-Svc": [
+							"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000"
+						],
+						"Content-Type": [
+							"application/json; charset=UTF-8"
+						],
+						"Date": [
+							"Fri, 06 Jun 2025 20:31:29 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						],
+						"Server": [
+							"ESF"
+						],
+						"Vary": [
+							"Origin",
+							"X-Origin",
+							"Referer"
+						],
+						"X-Content-Type-Options": [
+							"nosniff"
+						],
+						"X-Frame-Options": [
+							"SAMEORIGIN"
+						],
+						"X-Xss-Protection": [
+							"0"
+						]
+					},
+					"templated": false
+				}
+			},
+			{
+				"request": {
+					"path": [
+						{
+							"matcher": "exact",
+							"value": "/v1/chat/completions"
+						}
+					],
+					"method": [
+						{
+							"matcher": "exact",
+							"value": "POST"
+						}
+					],
+					"destination": [
+						{
+							"matcher": "exact",
+							"value": "api.openai.com"
+						}
+					],
+					"scheme": [
+						{
+							"matcher": "exact",
+							"value": "https"
+						}
+					],
+					"body": [
+						{
+							"matcher": "json",
+							"value": "{\"model\": \"gpt-3.5-turbo\", \"messages\": [{\"role\": \"user\", \"content\": \"Hello!\"}]}"
+						}
+					]
+				},
+				"response": {
+					"status": 200,
+					"body": "{\n  \"id\": \"chatcmpl-BtfVAvRFs22DC8ajqsJvWcygm38ai\",\n  \"object\": \"chat.completion\",\n  \"created\": 1752607272,\n  \"model\": \"gpt-3.5-turbo-0125\",\n  \"choices\": [\n    {\n      \"index\": 0,\n      \"message\": {\n        \"role\": \"assistant\",\n        \"content\": \"Hello! How can I assist you today?\",\n        \"refusal\": null,\n        \"annotations\": []\n      },\n      \"logprobs\": null,\n      \"finish_reason\": \"stop\"\n    }\n  ],\n  \"usage\": {\n    \"prompt_tokens\": 9,\n    \"completion_tokens\": 9,\n    \"total_tokens\": 18,\n    \"prompt_tokens_details\": {\n      \"cached_tokens\": 0,\n      \"audio_tokens\": 0\n    },\n    \"completion_tokens_details\": {\n      \"reasoning_tokens\": 0,\n      \"audio_tokens\": 0,\n      \"accepted_prediction_tokens\": 0,\n      \"rejected_prediction_tokens\": 0\n    }\n  },\n  \"service_tier\": \"default\",\n  \"system_fingerprint\": null\n}\n",
+					"encodedBody": false,
+					"headers": {
+						"Access-Control-Expose-Headers": [
+							"X-Request-ID"
+						],
+						"Alt-Svc": [
+							"h3=\":443\"; ma=86400"
+						],
+						"Cf-Cache-Status": [
+							"DYNAMIC"
+						],
+						"Cf-Ray": [
+							"95fb9f0f8e3f9374-MAA"
+						],
+						"Connection": [
+							"keep-alive"
+						],
+						"Content-Type": [
+							"application/json"
+						],
+						"Date": [
+							"Tue, 15 Jul 2025 19:21:12 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						],
+						"Openai-Organization": [
+							"personal-ljiyag"
+						],
+						"Openai-Processing-Ms": [
+							"208"
+						],
+						"Openai-Version": [
+							"2020-10-01"
+						],
+						"Server": [
+							"cloudflare"
+						],
+						"Set-Cookie": [
+							"__cf_bm=fMrQhgYtbYmURkhyW5axcxPkWmn0WPEW6y.UoeKZaX4-1752607272-1.0.1.1-w.D97sUtWuBbkJlGMg.7VuSEwji0efYXJuWUWJ6VzrOT0u552QZwdTk6OCFD8wZWBub59zWT46Vw7assl2NluVPGkZyHe.Zr5dPWb2GODEI; path=/; expires=Tue, 15-Jul-25 19:51:12 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
+							"_cfuvid=KsiWg.B3b9O_Q.giO54m4mvgLs0PJkJiLPTVpNC4NWw-1752607272745-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None"
+						],
+						"Strict-Transport-Security": [
+							"max-age=31536000; includeSubDomains; preload"
+						],
+						"X-Content-Type-Options": [
+							"nosniff"
+						],
+						"X-Envoy-Upstream-Service-Time": [
+							"211"
+						],
+						"X-Ratelimit-Limit-Requests": [
+							"10000"
+						],
+						"X-Ratelimit-Limit-Tokens": [
+							"200000"
+						],
+						"X-Ratelimit-Remaining-Requests": [
+							"9999"
+						],
+						"X-Ratelimit-Remaining-Tokens": [
+							"199996"
+						],
+						"X-Ratelimit-Reset-Requests": [
+							"8.64s"
+						],
+						"X-Ratelimit-Reset-Tokens": [
+							"1ms"
+						],
+						"X-Request-Id": [
+							"req_cf31a4349ec44ff991c9c134d6b434e3"
+						]
+					},
+					"templated": false
+				}
+			},
+			{
+				"request": {
+					"path": [
+						{
+							"matcher": "exact",
+							"value": "/v1/chat/completions"
+						}
+					],
+					"method": [
+						{
+							"matcher": "exact",
+							"value": "POST"
+						}
+					],
+					"destination": [
+						{
+							"matcher": "exact",
+							"value": "api.openai.com"
+						}
+					],
+					"scheme": [
+						{
+							"matcher": "exact",
+							"value": "https"
+						}
+					],
+					"body": [
+						{
+							"matcher": "json",
+							"value": "{\"model\": \"gpt-3.5-turbo\", \"stream\": true, \"messages\": [{\"role\": \"user\", \"content\": \"Hello!\"}]}"
+						}
+					]
+				},
+				"response": {
+					"status": 200,
+					"body": "data: {\"id\":\"chatcmpl-BtfewwTrkR3qNtmKuOfy536MJMsHK\",\"object\":\"chat.completion.chunk\",\"created\":1752607878,\"model\":\"gpt-3.5-turbo-0125\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"role\":\"assistant\",\"content\":\"\",\"refusal\":null},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-BtfewwTrkR3qNtmKuOfy536MJMsHK\",\"object\":\"chat.completion.chunk\",\"created\":1752607878,\"model\":\"gpt-3.5-turbo-0125\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"content\":\"Hello\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-BtfewwTrkR3qNtmKuOfy536MJMsHK\",\"object\":\"chat.completion.chunk\",\"created\":1752607878,\"model\":\"gpt-3.5-turbo-0125\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"content\":\"!\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-BtfewwTrkR3qNtmKuOfy536MJMsHK\",\"object\":\"chat.completion.chunk\",\"created\":1752607878,\"model\":\"gpt-3.5-turbo-0125\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"content\":\" How\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-BtfewwTrkR3qNtmKuOfy536MJMsHK\",\"object\":\"chat.completion.chunk\",\"created\":1752607878,\"model\":\"gpt-3.5-turbo-0125\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"content\":\" can\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-BtfewwTrkR3qNtmKuOfy536MJMsHK\",\"object\":\"chat.completion.chunk\",\"created\":1752607878,\"model\":\"gpt-3.5-turbo-0125\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"content\":\" I\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-BtfewwTrkR3qNtmKuOfy536MJMsHK\",\"object\":\"chat.completion.chunk\",\"created\":1752607878,\"model\":\"gpt-3.5-turbo-0125\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"content\":\" assist\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-BtfewwTrkR3qNtmKuOfy536MJMsHK\",\"object\":\"chat.completion.chunk\",\"created\":1752607878,\"model\":\"gpt-3.5-turbo-0125\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"content\":\" you\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-BtfewwTrkR3qNtmKuOfy536MJMsHK\",\"object\":\"chat.completion.chunk\",\"created\":1752607878,\"model\":\"gpt-3.5-turbo-0125\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"content\":\" today\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-BtfewwTrkR3qNtmKuOfy536MJMsHK\",\"object\":\"chat.completion.chunk\",\"created\":1752607878,\"model\":\"gpt-3.5-turbo-0125\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{\"content\":\"?\"},\"logprobs\":null,\"finish_reason\":null}]}\n\ndata: {\"id\":\"chatcmpl-BtfewwTrkR3qNtmKuOfy536MJMsHK\",\"object\":\"chat.completion.chunk\",\"created\":1752607878,\"model\":\"gpt-3.5-turbo-0125\",\"service_tier\":\"default\",\"system_fingerprint\":null,\"choices\":[{\"index\":0,\"delta\":{},\"logprobs\":null,\"finish_reason\":\"stop\"}]}\n\ndata: [DONE]\n\n",
+					"encodedBody": false,
+					"headers": {
+						"Access-Control-Allow-Origin": ["*"],
+					    "Access-Control-Allow-Methods": ["GET", "POST", "OPTIONS"],
+					    "Access-Control-Allow-Headers": ["Content-Type", "Authorization"],
+						"Access-Control-Expose-Headers": [
+							"X-Request-ID"
+						],
+						"Alt-Svc": [
+							"h3=\":443\"; ma=86400"
+						],
+						"Cf-Cache-Status": [
+							"DYNAMIC"
+						],
+						"Cf-Ray": [
+							"95fbade1986e7feb-MAA"
+						],
+						"Connection": [
+							"keep-alive"
+						],
+						"Content-Type": [
+							"text/event-stream; charset=utf-8"
+						],
+						"Date": [
+							"Tue, 15 Jul 2025 19:31:19 GMT"
+						],
+						"Hoverfly": [
+							"Was-Here"
+						],
+						"Openai-Organization": [
+							"personal-ljiyag"
+						],
+						"Openai-Processing-Ms": [
+							"176"
+						],
+						"Openai-Version": [
+							"2020-10-01"
+						],
+						"Server": [
+							"cloudflare"
+						],
+						"Set-Cookie": [
+							"__cf_bm=Hr_1nSPwSFsG46ohx8z6uEXt_Gn4970sIkA4O4ICzFg-1752607879-1.0.1.1-E6TfddqPhlnhrkGanUU8N5vug54e20J9v_fi3m2ljgni8Ib4SObbfJNQ8LQQG3EXveVpB8c5vMSZsXVpjuPrbrJnysK1Ner7qx0LVt1t3o8; path=/; expires=Tue, 15-Jul-25 20:01:19 GMT; domain=.api.openai.com; HttpOnly; Secure; SameSite=None",
+							"_cfuvid=49VORN0y6x0dIwYSFEb811JnYejgsp43N_6hR3drXDY-1752607879032-0.0.1.1-604800000; path=/; domain=.api.openai.com; HttpOnly; Secure; SameSite=None"
+						],
+						"Strict-Transport-Security": [
+							"max-age=31536000; includeSubDomains; preload"
+						],
+						"X-Content-Type-Options": [
+							"nosniff"
+						],
+						"X-Envoy-Upstream-Service-Time": [
+							"181"
+						],
+						"X-Ratelimit-Limit-Requests": [
+							"10000"
+						],
+						"X-Ratelimit-Limit-Tokens": [
+							"200000"
+						],
+						"X-Ratelimit-Remaining-Requests": [
+							"9999"
+						],
+						"X-Ratelimit-Remaining-Tokens": [
+							"199996"
+						],
+						"X-Ratelimit-Reset-Requests": [
+							"8.64s"
+						],
+						"X-Ratelimit-Reset-Tokens": [
+							"1ms"
+						],
+						"X-Request-Id": [
+							"req_88ae20da2007b93246f5ab1c1460790a"
+						]
+					},
+					"templated": false
+				}
+			},
+			{
+			  "request": {
+				"method": [
+				  { "matcher": "exact", "value": "OPTIONS" }
+				],
+				"path": [
+				  { "matcher": "glob", "value": "*" }
+				],
+				"destination": [
+				  { "matcher": "glob", "value": "*" }
+				],
+				"scheme": [
+				  { "matcher": "glob", "value": "*" }
+				]
+			  },
+			  "response": {
+				"status": 204,
+				"body": "",
+				"headers": {
+				  "Access-Control-Allow-Origin": ["*"],
+				  "Access-Control-Allow-Methods": ["POST", "OPTIONS"],
+				  "Access-Control-Allow-Headers": ["Content-Type", "Authorization"]
+				}
+			  }
+			}
+		],
+		"globalActions": {
+			 "delays": [
+           {
+               "urlPattern": ".",
+               "httpMethod": "",
+               "delay": 2000
+            }],
+			"delaysLogNormal": []
+		}
+	},
+	"meta": {
+		"schemaVersion": "v5.3",
+		"hoverflyVersion": "v1.11.1",
+		"timeExported": "2025-07-15T19:35:29Z"
+	}
+}
